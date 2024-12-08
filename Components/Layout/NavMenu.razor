@@ -3,30 +3,38 @@
     <span class="navbar-brand mb-0 h1">Zak's Website :)</span>
 
     <div class = "mt-2">
+    <a class = "HomeButton navButton" href ="/">Home</a>
     <a class = "AboutButton navButton" href ="/aboutme">About Me</a>
     <a class= "BlogButton navButton" href ="/blog">My Blog</a>
       
     </div>
-
   </div>
-
-  
+</nav>
     <div class="search-box">
         <div class="row">
-          <input type="text" id="input-box" placeholder="Search..." autocomplete="off">
+          <input @bind="SearchTerm" @bind:event="oninput" type="text" id="input-box" placeholder="Search..." autocomplete="off">
           <button type="submit" class="submitbtn"> Submit </button>
         </div>
         
         <div class="result-box" MyValue>
-            
+          @foreach (var game in games)
+          {
+            if(game.ToLower().Contains(SearchTerm.ToLower()))
+            {
+              if(SearchTerm != string.Empty)
+              {
+                <section>@game</section>
+                <section>@SearchTerm</section>
+              }
+
+            }
+          }  
         </div>
       </div>
-</nav>
-
 
 <style>
   .navbar {
-    color: rgb(231, 231, 231);
+  color: rgb(231, 231, 231);
   padding: 18px 0px;
   bottom: 10px;
 }
@@ -48,3 +56,14 @@
 }
 
 </style>
+@code
+{
+  public string? SearchTerm { get; set; } = string.Empty;
+  List<string> games = new List<string>
+    {
+      "Omori",
+      "Oneshot"
+    };
+
+
+}

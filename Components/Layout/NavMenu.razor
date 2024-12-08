@@ -5,14 +5,28 @@
     <div class = "mt-2">
     <a class = "AboutButton navButton" href ="/aboutme">About Me</a>
     <a class= "BlogButton navButton" href ="/blog">My Blog</a>
+      
     </div>
 
   </div>
+
+  
+    <div class="search-box">
+        <div class="row">
+          <input type="text" id="input-box" placeholder="Search..." autocomplete="off">
+          <button type="submit" class="submitbtn"> Submit </button>
+        </div>
+        
+        <div class="result-box" MyValue>
+            
+        </div>
+      </div>
 </nav>
+
 
 <style>
   .navbar {
-    color: rgb(153, 18, 186);
+    color: rgb(231, 231, 231);
   padding: 18px 0px;
   bottom: 10px;
 }
@@ -22,7 +36,7 @@
   .navButton {
   border: none;
   background-color: rgba(128, 128, 128, 0);
-  color: rgb(153, 18, 186);
+  color: rgb(231, 231, 231);
   padding: 10px 30px;
   text-align: center;
   text-decoration: none;
@@ -32,4 +46,5 @@
   position: relative;
   cursor: pointer;
 }
+
 </style>

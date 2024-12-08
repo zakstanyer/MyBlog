@@ -101,3 +101,51 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
+
+.search-box{
+    width: 600px;
+    background: #eeeeee;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+input{
+    flex: 1;
+    height: 25px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    color: #272727;
+}
+
+body{
+    background: #262a2f;
+    color: #f8f8f8;
+}
+.submitbtn{
+    background-color: #bcbcc0;
+    color: #000;
+    position: relative;
+    height:30px;
+    width:120px;
+    justify-content:center;
+    }
+.result-box ul{
+    border-top: 1px solid #999;
+    padding: 15px 10px;
+}
+.result-box ul li{
+    list-style: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.result-box ul li:hover{
+    background:rgb(87, 0, 128);
+}

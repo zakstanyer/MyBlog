@@ -2,8 +2,10 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-h1:focus {
+h1 {
     outline: none;
+    padding-top: 30px;
+    top: 50px;
 }
 
 a, .btn-link {
@@ -102,16 +104,6 @@ code {
     color: #c02d76;
 }
 
-.search-box{
-    width: 400px;
-    background: #eeeeee;
-    margin: 10px auto 0;
-    border-radius: 5px;
-    position: relative;
-    left: 500px;
-    bottom: 85px;
-}
-
 .row{
     display: flex;
     align-items: center;
@@ -148,7 +140,6 @@ section{
     color: #000;
     background-color: #ffffff;
     width: 400px;
-
 }
 .result-box ul li{
     list-style: none;

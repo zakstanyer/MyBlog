@@ -1,59 +1,78 @@
 ﻿<nav class="navbar navbar-primary bg-dark">
     <div class="container">
-    <span class="navbar-brand mb-0 h1">Zak's Website :)</span>
 
     <div class = "mt-2">
-    <a class = "HomeButton navButton" href ="/">Home</a>
-    <a class = "AboutButton navButton" href ="/aboutme">About Me</a>
-    <a class= "BlogButton navButton" href ="/blog">My Blog</a>
-      
+    <div class="navdiv">
+      <div class="logo">Zak Stanyer</div>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="/aboutme">About Me</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+
     </div>
-  </div>
-</nav>
-    <div class="search-box">
+    </div>
+
+        <div class="search-box">
         <div class="row">
           <input @bind="SearchTerm" @bind:event="oninput" type="text" id="input-box" placeholder="Search..." autocomplete="off">
           <button type="submit" class="submitbtn"> Submit </button>
         </div>
-        
+
         <div class="result-box" MyValue>
           @foreach (var game in games)
           {
             if(game.ToLower().Contains(SearchTerm.ToLower()))
             {
               if(SearchTerm != string.Empty)
-              {
+              {                
                 <section>@game</section>
               }
-
             }
           }  
         </div>
       </div>
+  </div>
+</nav>
+
+
 
 <style>
   .navbar {
   color: rgb(231, 231, 231);
-  padding: 18px 0px;
-  bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 90px;
 }
-</style>
+  .navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+  }
+  .logo{
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    margin-right: 60px;
+    position: relative;
+    bottom: 10px;
+  }
+  li{
+    display:inline-block;
+  }
+  li a{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 35px;
+  }
 
-<style>
-  .navButton {
-  border: none;
-  background-color: rgba(128, 128, 128, 0);
-  color: rgb(231, 231, 231);
-  padding: 10px 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  right: 400px;
-  position: relative;
-  cursor: pointer;
+  .search-box{
+    width: 400px;
+    background: #eeeeee;
+    height: 50px;
 }
-
 </style>
 @code
 {

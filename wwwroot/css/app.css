@@ -3,9 +3,23 @@ html, body {
 }
 
 h1 {
+    text-align: center;
     outline: none;
     padding-top: 30px;
     top: 50px;
+}
+h2 {
+    text-align: center;
+    outline: none;
+}
+h3 {
+    text-align: center;
+    outline: none;
+}
+.centreimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a, .btn-link {

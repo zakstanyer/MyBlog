@@ -15,6 +15,25 @@
 
         
   </div>
+        <div class="search-box">
+        <div class="row">
+          <input @bind="SearchTerm" @bind:event="oninput" type="text" id="input-box" placeholder="Search..." autocomplete="off">
+          <button type="submit" class="submitbtn"> Submit </button>
+        </div>
+
+        <div class="result-box" MyValue>
+          @foreach (var game in games)
+          {
+            if(game.ToLower().Contains(SearchTerm.ToLower()))
+            {
+              if(SearchTerm != string.Empty)
+              {                
+                <section>@game</section>
+              }
+            }
+          }  
+        </div>
+      </div>
 
 
 </nav>

@@ -1,7 +1,47 @@
 ﻿@page "/projects"
+@using BlazorBootstrap
 
 <h1>Projects</h1>
 &emsp;&emsp;&emsp;
+
+<h3>Zombie Rush</h3>
+This is my portfolio piece, a solo project developed during my third year at University.
+It is a top-down, wave based zombie shooter game. To see my development process, please see my development log
+<a href="https://zakstanyer.wixsite.com/zakstanyer/zombie-rush" target="_blank">here.</a>
+<br><br>
+<p>This is my final solo project, developed during my third year at University.
+It is a top-down shooter featuring upgrade trees, an inventory system,
+saving and loading progress, and more.</p>
+<br>
+<video width="1280" height="720" controls>
+  <source src="/weapon change demo.mp4" type="video/mp4">
+</video>
+<p>This short video shows a few of my game's features. The enemies find the player using an A* pathfinding algorithm,
+    and I am able to purchase a new weapon using coins and switch between my owned weapons which have different stats.</p>
+
+<Carousel Style="margin-top: 50px">
+    <CarouselItem Active="true">
+        <img src="/image (17).png" class="centreimage" />
+        <figcaption style="text-align:left">This code runs at the start of every round. The Wave Manager object checks if a spawner object is off screen before spawning an enemy.
+            First, it selects a random spawner from the list, then checks if the spawner's isOnScreen variable is false.
+            If it is, it runs the spawner's SpawnEnemy method. If it is on screen, it repeats this method until an off-screen spawner is found.
+            <br>This means that enemies always spawn off-screen which prevents enemies spawning directly on the player.</figcaption>
+    </CarouselItem>
+    <CarouselItem>
+        <img src="/image.png" class="centreimage" />
+        <figcaption style="text-align:left">This script is run when the player upgrades their handgun, in the upgrade menu seen in the video above.
+        <br>First, I check the player owns the gun, then, if they have not bought all the upgrades and can afford the upgrade,
+        the coins are deducted from the player's total and the gun is upgraded.</figcaption>
+    </CarouselItem>
+    <CarouselItem>
+        <img src="/image (6).png" style="width:50%" class="centreimage"/>
+        <figcaption style="text-align:left">This is the code for switching between weapons. Looking at EquipItem1, you can see the equipped item
+        is changed to the first one in the list, but then I use a switch statement to check what weapon is equipped.
+        <br>This is because the player could've obtained the weapons in any order. Then, I set the player's damage and fire rate values to the 
+        weapon with the matching ID to what is equipped.</figcaption>
+    </CarouselItem>
+</Carousel>
+
 <h3>My Website</h3>
 <br>
 I work on this website for fun and it has been a great opportunity to increase my confidence with HTML and ASP.NET.
@@ -26,7 +66,7 @@ as well as in my own time.
 They showcase my programming ability as well as my project management skills.
 <br><br><br>
 <h3>Ludus Mortis</h3>
-<a href="https://neothemod.itch.io/ludus-mortis"><p style="text-align:center; font-size: large;">View on Itch.io</p></a>
+<a href="https://neothemod.itch.io/ludus-mortis" target="_blank"><p style="text-align:center; font-size: large;">View the game's page on Itch.io</p></a>
 <br>
 Ludus Mortis is a narrative-driven card game which revolves around games of blackjack between the player and death.
 However, you will find that the game is rigged against you, and the only way to escape death is by cheating.
@@ -52,45 +92,16 @@ This was our final group project and the project I am most proud of. I was the p
 <br>- Implementation of Fungus plugin in Unity to manage dialogue trees
 
 
-
-<br><br><br>
-
-<h3>Zombie Rush</h3>
-<a href="https://neothemod.itch.io/ludus-mortis"><p style="text-align:center; font-size: large;">View on Itch.io</p></a>
-<br>
-This is my final solo project, developed during my third year at University.
-It is a top-down shooter featuring upgrade trees, an inventory system,
-saving and loading progress, and more.
-<br><br>
-<img src="/download.png" width="853.33" height="480" class="centreimage"/>
-<br><br>
-This was our final group project and the project I am most proud of. I was the programmer on the team so I was responsible for the following:
-
-<br>- Programming of blackjack gameplay​
-
-<br>- Created a weighted random algorithm to affect cards drawn
-
-<br>- Cheating mechanics, such as swapping out cards and changing bets
-
-<br>- Created and algorithm for the dealer to cheat when they have a low hand
-
-<br>- Functionality of the drinks
-
-<br>- UI programming, including hand scores and chip balances
-
-<br>- Sprite animation using the Unity Animator
-
-<br>- Implementation of Fungus plugin in Unity to manage dialogue trees
-
-
-
 <style>
-
 
 figcaption{
 text-align: center;
+padding-bottom: 50px;
 }
 
+p{
+    margin-top: 20px;
+}
 </style>
 
 

@@ -9,10 +9,12 @@ h1 {
     top: 50px;
 }
 h2 {
+    padding-top: 30px;
     text-align: center;
     outline: none;
 }
 h3 {
+    padding-top: 30px;
     text-align: center;
     outline: none;
 }
@@ -115,7 +117,7 @@ a, .btn-link {
     }
 
 code {
-    color: #c02d76;
+    color: #c02d26;
 }
 
 .row{

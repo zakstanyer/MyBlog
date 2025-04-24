@@ -7,7 +7,7 @@
 <br>
 Ludus Mortis is a narrative-driven card game which revolves around games of blackjack between the player and death.
 However, you will find that the game is rigged against you, and the only way to escape death is by cheating.
-<br><br>
+<p>Read my development log <a href = "https://zakstanyer.wixsite.com/zakstanyer/ludusmortis" target="_blank">here.</a></p><br><br>
 <img src="/download.png" width="853" height="480" class="centreimage"/>
 <br><br>
 This was our final group project and the project I am most proud of. I was the programmer on the team so I was responsible for the following:
@@ -27,6 +27,30 @@ This was our final group project and the project I am most proud of. I was the p
 <br>- Sprite animation using the Unity Animator
 
 <br>- Implementation of Fungus plugin in Unity to manage dialogue trees
+
+<Carousel Style="margin-top: 50px">
+    <CarouselItem Active="true">
+        <img src="/ludusmortisgameplay.png" class="centreimage" />
+        <figcaption style="text-align:left">This code runs at the start of every round. The Wave Manager object checks if a spawner object is off screen before spawning an enemy.
+            First, it selects a random spawner from the list, then checks if the spawner's isOnScreen variable is false.
+            If it is, it runs the spawner's SpawnEnemy method. If it is on screen, it repeats this method until an off-screen spawner is found.
+            <br>This means that enemies always spawn off-screen which prevents enemies spawning directly on the player.</figcaption>
+    </CarouselItem>
+    <CarouselItem>
+        <img src="/ludusmortisluck.png" class="centreimage" />
+        <figcaption style="text-align:left">This script is run when the player upgrades their handgun, in the upgrade menu seen in the video above.
+        <br>First, I check the player owns the gun, then, if they have not bought all the upgrades and can afford the upgrade,
+        the coins are deducted from the player's total and the gun is upgraded.</figcaption>
+    </CarouselItem>
+    <CarouselItem>
+        <img src="/ludusmortischeat.png" style="width:50%" class="centreimage"/>
+        <figcaption style="text-align:left">This is the code for switching between weapons. Looking at EquipItem1, you can see the equipped item
+        is changed to the first one in the list, but then I use a switch statement to check what weapon is equipped.
+        <br>This is because the player could've obtained the weapons in any order. Then, I set the player's damage and fire rate values to the 
+        weapon with the matching ID to what is equipped.</figcaption>
+    </CarouselItem>
+</Carousel>
+
 
 @code {
 

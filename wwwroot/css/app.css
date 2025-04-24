@@ -120,9 +120,15 @@ code {
     color: #c02d26;
 }
 
+
 .row{
     display: flex;
 
+}
+
+a {
+    padding: 15px 32px;
+    text-decoration: none;
 }
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */

@@ -3,24 +3,24 @@
 @using BlazorBootstrap
 
 <h1>Projects</h1>
-&emsp;&emsp;&emsp;
+
 
 <h3>Zombie Rush</h3>
 This is my portfolio piece, a solo project developed during my third year at University.
 It is a top-down, wave based zombie shooter game. To see my development process, please see my development log
-<a href="https://zakstanyer.wixsite.com/zakstanyer/zombierush" target="_blank" style="text-decoration: underline; padding: 1px"> here.</a>
+<a href="https://zakstanyer.wixsite.com/zakstanyer/zombierush" target="_blank" style="text-decoration: underline; padding: 2px"> here.</a>
 <br><br>
 <p>This is my final solo project, developed during my third year at University.
 It is a top-down shooter featuring upgrade trees, an inventory system,
 saving and loading progress, and more.</p>
 <br>
-<video width="1280" height="720" controls>
+<video controls>
   <source src="/weapon change demo.mp4" type="video/mp4">
 </video>
 <p>This short video shows a few of my game's features. The enemies find the player using an A* pathfinding algorithm,
     and I am able to purchase a new weapon using coins and switch between my owned weapons which have different stats.</p>
 
-<Carousel Style="margin-top: 50px">
+<Carousel Style="margin-top: 70px">
     <CarouselItem Active="true">
         <img src="/image (17).png" class="centreimage" />
         <figcaption style="text-align:left">This code runs at the start of every round. The Wave Manager object checks if a spawner object is off screen before spawning an enemy.
@@ -35,7 +35,7 @@ saving and loading progress, and more.</p>
         the coins are deducted from the player's total and the gun is upgraded.</figcaption>
     </CarouselItem>
     <CarouselItem>
-        <img src="/image (6).png" style="width:50%" class="centreimage"/>
+        <img src="/image (6).png" class="centreimage"/>
         <figcaption style="text-align:left">This is the code for switching between weapons. Looking at EquipItem1, you can see the equipped item
         is changed to the first one in the list, but then I use a switch statement to check what weapon is equipped.
         <br>This is because the player could've obtained the weapons in any order. Then, I set the player's damage and fire rate values to the 
@@ -47,11 +47,21 @@ saving and loading progress, and more.</p>
 
 figcaption{
 text-align: center;
-padding-bottom: 50px;
+padding-bottom: 20px;
 }
 
 p{
     margin-top: 20px;
+}
+img {
+    width: 70%;
+    height: auto;
+
+}
+
+video{
+    width: 100%;
+    height: auto;
 }
 </style>
 

@@ -1,64 +1,57 @@
 ﻿@page "/projects"
 <PageTitle>Projects</PageTitle>
 @using BlazorBootstrap
-<br>
+<br />
+<figcaption><h2 style="float:right; width:50%">Zombie Rush</h2></figcaption>
+<img src="/zombierushicon.png" alt="Zombie Rush" style="float:left; width:50%">
+<figcaption style="width:50%; text-align:center; overflow:hidden;">
+    A top-down shooter featuring A* pathfinding, an inventory system, saving and loading progress, upgrade trees and more.
+</figcaption>
 
-<div class="row">
-    <div class="column">
-        <figcaption><h2>Zombie Rush</h2></figcaption>
-        <img src="/zombierushicon.png" alt="C#" style="width:97.6%">
-        
-        <a href="/ProjectZombieRush" target="_blank">Read More</a>
-        <br>
-    </div>
+<a href="/ProjectZombieRush" target="_blank" style="float:right">Read More</a>
 
-    <div class="column">
-        <figcaption><h2>Ludus Mortis </h2> </figcaption>
-        <img src="/download.png" alt="C#" style="width:100%">
+<div style="margin-top:20%">
+    <figcaption><h2 style="float:right; width:50%">Ludus Mortis</h2></figcaption>
+    <img src="/download.png" alt="Ludus Mortis" style="float:left; width:50%">
+    <figcaption style="width:50%; text-align:center; overflow:hidden;">
+        A narrative-driven card game involving games of blackjack between the player and death. However, you will find that the game is rigged against you, and the only way to escape death is by cheating.
+    </figcaption>
+    <a href="/ProjectLudusMortis" target="_blank" style="float:right">Read More</a>
+</div>
 
-        <a href="/ProjectLudusMortis" target="_blank">Read More</a>
-        <br>
-    </div>
-
-    <div class="column">
-        <figcaption><h2>Games Database</h2></figcaption>
-        <img src="/gamesdatabase.png" alt="C#" style="width:100%">
-
-        <a href="/ProjectMyWebsite" target="_blank">Read More</a>
-        <br>
-    </div>
-
+<div style="margin-top:20%">
+    <figcaption><h2 style="float:right; width:50%">Games Database</h2></figcaption>
+    <img src="/gamesdatabase.png" alt="Games Database" style="float:left; width:50%">
+    <figcaption style="width:50%; text-align:center; overflow:hidden;">
+        My Blazor Web App in which I connect to my SQL Server database to search, edit and create new entries using a form.
+    </figcaption>
+    <a href="/ProjectMyWebsite" target="_blank" style="float:right">Read More</a>
 </div>
 
 @code {
 
 }
 <style>
+
     h2{
 
-        font-size: 20px;
-        text-align:center;
+        font-size: 28px;
         overflow-clip-margin: 20px;
         height: 80px;
     }
 
     a{
-        background-color: darkviolet;
-        border: none;
+        border-radius: 25px;
         color: white;
-        padding: 15px 2px;
-        display: block;
-        margin: auto;
-        margin-top: 20px;
+        padding: 18px;
+        margin-top: 10px;
+        margin-right: 8%;
         font-size: 14px;
         text-align: center;
-        width: 80%;
+        width: 35%;
         height: 64px;
-
+        background: linear-gradient(to right, rebeccapurple 10%, purple 90%);
     }
-.column
-{
 
-    width: 30%;
-}
+
 </style>

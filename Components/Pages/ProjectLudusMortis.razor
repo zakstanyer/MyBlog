@@ -28,26 +28,26 @@ This was our final group project and the project I am most proud of. I was the p
 
 <br>- Implementation of Fungus plugin in Unity to manage dialogue trees
 
-<Carousel Style="margin-top: 50px">
+<Carousel Style="margin-top: 50px; margin-bottom: 20px;">
     <CarouselItem Active="true">
         <img src="/ludusmortisgameplay.png" class="centreimage" />
-        <figcaption style="text-align:left">This code runs at the start of every round. The Wave Manager object checks if a spawner object is off screen before spawning an enemy.
-            First, it selects a random spawner from the list, then checks if the spawner's isOnScreen variable is false.
-            If it is, it runs the spawner's SpawnEnemy method. If it is on screen, it repeats this method until an off-screen spawner is found.
-            <br>This means that enemies always spawn off-screen which prevents enemies spawning directly on the player.</figcaption>
+        <figcaption style="text-align:left">A screenshot of the player looking down at their cards. Notice the card up the player's sleeve: this is one of the many ways the player can cheat and gain an advantage.</figcaption>
     </CarouselItem>
     <CarouselItem>
         <img src="/ludusmortisluck.png" class="centreimage" />
-        <figcaption style="text-align:left">This script is run when the player upgrades their handgun, in the upgrade menu seen in the video above.
-        <br>First, I check the player owns the gun, then, if they have not bought all the upgrades and can afford the upgrade,
-        the coins are deducted from the player's total and the gun is upgraded.</figcaption>
+        <figcaption style="text-align:left">This script shows how the luck variable affects the chances of drawing high value cards by limiting the range of cards that can be drawn from.
+        <br>The list of cards is sorted by ascending value, and has a length of 52. So if the player's luck is -10, for example, their cards will be drawn from item 1 in the list to only 42.
+        <br>Else, if the player has positive luck, it eliminates the possibility of drawing low cards by drawing from a range starting at (1 plus luck).</figcaption>
     </CarouselItem>
     <CarouselItem>
-        <img src="/ludusmortischeat.png" style="width:50%" class="centreimage"/>
-        <figcaption style="text-align:left">This is the code for switching between weapons. Looking at EquipItem1, you can see the equipped item
-        is changed to the first one in the list, but then I use a switch statement to check what weapon is equipped.
-        <br>This is because the player could've obtained the weapons in any order. Then, I set the player's damage and fire rate values to the 
-        weapon with the matching ID to what is equipped.</figcaption>
+        <img src="/ludusmortischeat.png" style="width:80%" class="centreimage"/>
+        <figcaption style="text-align:left">This is a script used by the dealer to cheat against the player.
+        <br>First of all, the dealer knows what their next card will be before it is drawn. This allows them to calculate the best card to swap out in order to get a score of 21 when the next card is drawn.
+        When the player is not looking directly at the dealer, the Cheat method may be called. When this is called, the dealer will evaluate a card in their hand, as seen in the for loop.
+        They can figure out how much they need to improve their score by to reach 21.
+        <br>For example, if the dealer has a hand of 3, 5 and 8, equal to 16, they know they need to improve a card by 5 to reach 21. So using the Cheat method, they could swap out their 5 card for a 10, reaching 21.
+        <br>The else loop is there if the dealer needs more than the highest possible card value to reach 21 (a 10). In this case, they will just swap a card out for a higher value card.
+        </figcaption>
     </CarouselItem>
 </Carousel>
 
@@ -62,6 +62,7 @@ This was our final group project and the project I am most proud of. I was the p
         width: 100%;
         height:auto;
     }
+
 </style>
 @code {
 

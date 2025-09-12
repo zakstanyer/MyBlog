@@ -8,16 +8,56 @@ I work on this website for fun and it has been a great opportunity to increase m
 <p>On the frontend I have a list of entries which can be sorted, edited and deleted by the user. The user can also create new entries using a form.
     This is then commited to an SQL Server database so entries are saved when the program is closed.
 </p>
-<br>
-<h3>CREATE</h3>
-<br>
-<div class="row">
+
+<Carousel Style="margin-top: 70px">
+    <CarouselItem Active="true">
+    <h3>CREATE</h3>
+    <br>
+    <div class="row">
         <img src="/CREATEgame.png" alt="HTML" style="width:80%"  class="centreimage">
         <figcaption>By clicking the link on the home page, the user is directed to the Create page. 
             As you can see, it asks for the game's title, release date, genre, price, and a rating, then binds the input to the related variables.
         </figcaption>
-</div>
-
+    </div>
+    </CarouselItem>
+    <CarouselItem>
+    <h3>EDIT</h3>
+    <br>
+    <div class="row">
+        <img src="/EditGameForm.png" alt="HTML" style="width:80%"  class="centreimage">
+        <figcaption>By clicking the Edit option on an entry, the user can submit a form to change its values.
+        </figcaption>
+    </div>
+    </CarouselItem>
+    <CarouselItem>
+    <h3>EDIT</h3>
+    <br>
+    <div class="row">
+        <img src="/UpdateGameMethod.png" alt="HTML" style="width:80%"  class="centreimage">
+        <figcaption>Once the form is submitted this method runs. It establishes a database connection and applies the changes.
+        </figcaption>
+    </div>
+    </CarouselItem>
+    <CarouselItem>
+    <h3>DELETE</h3>
+    <br>
+    <div class="row">
+        <img src="/DeleteGame.png" alt="HTML" style="width:80%"  class="centreimage">
+        <figcaption>The user can delete entries by clicking the relevant link on the index page. This page shows the details of the entry to be deleted and asks for confirmation.
+        </figcaption>
+    </div>
+    </CarouselItem>
+        <CarouselItem>
+    <h3>DELETE</h3>
+    <br>
+    <div class="row">
+        <img src="/DeleteGameMethod.png" alt="HTML" style="width:80%"  class="centreimage">
+        <figcaption>Once deletion is confirmed, this method runs. It creates a database connection, removes the entry and saves the changes, then navigates back to the index page.
+        </figcaption>
+    </div>
+    </CarouselItem>
+</Carousel>
+<br />
 <div class="row">
         <img src="/gamesdatabaselist.png" alt="HTML" style="width:80%"  class="centreimage">
         <figcaption>I have made three entries into the database. Each entry requries a Title, Release Date, Genre, Price and a Score.

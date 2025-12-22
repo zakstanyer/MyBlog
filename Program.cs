@@ -12,10 +12,11 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", policy =>
                           {
-                              policy.WithOrigins("http://localhost:7237")
+                              policy.WithOrigins("http://localhost:7237", "https://zakstanyer.com/RESTAPI")
                                                   .AllowAnyHeader()
                                                   .AllowAnyMethod()
-                                                  .AllowCredentials();
+
+                                                  .AllowAnyOrigin();
                           });
 });
 

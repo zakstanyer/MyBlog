@@ -9,11 +9,16 @@
 	<h3>Title: @game.name</h3>
 	<p>Completed: @game.isComplete</p>
 }
+else{
+	<h3>id: -</h3>
+	<h3>Title: -</h3>
+	<p>Completed: -</p>
+}
 
 
 This project is an example of a controller-based API created to interact with my SQL Server database.
 @code {
-	public Game? game;
+	public Game game;
 
 	public HttpClient httpClient = new HttpClient();
 
@@ -23,11 +28,10 @@ This project is an example of a controller-based API created to interact with my
 	}
 
 
-
 	public class Game
 	{
 		public int id { get; set; }
-		public string? name { get; set; }
+		public string name { get; set; }
 		public bool isComplete { get; set; }
 	}
 }

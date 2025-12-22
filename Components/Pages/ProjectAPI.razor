@@ -5,6 +5,7 @@
 
 @if(game!=null)
 {
+	<h3>id: @game.id</h3>
 	<h3>Title: @game.name</h3>
 	<p>Completed: @game.isComplete</p>
 }
@@ -19,7 +20,6 @@ This project is an example of a controller-based API created to interact with my
 	public async Task FetchData()
 	{
 		game = await httpClient.GetFromJsonAsync<Game>("https://localhost:7029/api/games/1");
-
 	}
 
 

@@ -15,7 +15,7 @@ builder.Services.AddCors(options =>
                               policy.WithOrigins("http://localhost:7237", "https://zakstanyer.com")
                                                   .AllowAnyHeader()
                                                   .AllowAnyMethod()
-
+                                                  .AllowCredentials()
                                                   .AllowAnyOrigin();
                           });
 });

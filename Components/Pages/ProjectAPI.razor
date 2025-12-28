@@ -1,38 +1,9 @@
 ﻿@page "/RESTAPI"
+
 <PageTitle>REST API</PageTitle>
 
-<button @onclick = "FetchData"> Get Data </button>
-
-@if(game!=null)
-{
-	<h3>id: @game.id</h3>
-	<h3>Title: @game.name</h3>
-	<p>Completed: @game.isComplete</p>
-}
-else{
-	<h3>id: -</h3>
-	<h3>Title: -</h3>
-	<p>Completed: -</p>
-}
-
-
 This project is an example of a controller-based API created to interact with my SQL Server database.
-@code {
-	public Game? game;
+<p></p>
+<img src="/Screenshot_7.png" class="centreimage" />
 
-	public HttpClient httpClient = new HttpClient();
-
-	public async Task FetchData()
-	{
-		game = await httpClient.GetFromJsonAsync<Game>("https://localhost:7029/api/games/1");
-	}
-
-
-	public class Game
-	{
-		public int id { get; set; }
-		public string? name { get; set; }
-		public bool isComplete { get; set; }
-	}
-}
-
+This is the .http file which is used to send requests to the database to retrieve and modify data. As you can see, I have made a request to GET all games in the database and the entries have been displayed on the right.

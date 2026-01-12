@@ -2,12 +2,9 @@
 <PageTitle>Zombie Rush</PageTitle>
 @using BlazorBootstrap
 
-<h1>Projects</h1>
-
-
-<h3>Zombie Rush</h3>
+<h1>Zombie Rush</h1>
 This is my final solo project, developed during my third year at University.
-It is a top-down shooter featuring upgrade trees, an inventory system, saving and loading progress, and more. 
+It is a top-down shooter featuring state machines, upgrade trees, an inventory system, saving and loading progress, and more. 
 Unfortunately, I no longer have access to the repository since leaving university, but I did create a blog which details the development process.
 You can read it
 <a href="https://zakstanyer.wixsite.com/zakstanyer/zombierush" target="_blank" style="text-decoration: underline; padding: 2px"> here.</a>
@@ -17,8 +14,18 @@ You can read it
 <video controls>
   <source src="/weapon change demo.mp4" type="video/mp4">
 </video>
-<p>This short video shows a few of my game's features. The enemies find the player using an A* pathfinding algorithm,
-    and I am able to purchase a new weapon using coins and switch between my owned weapons which have different stats.</p>
+<p>This short video shows a few of my game's features. The enemies chase the player when they are in view,
+    and you can see me purchasing a new weapon using coins and I switch between my owned weapons which have different stats.</p>
+
+<p>
+    <h2>A* Pathfinding and State Machines</h2>
+    <br />For this project, I began implementing an A* pathfinding algorithm, like the one used in my
+    <a href="https://zakstanyer.wixsite.com/zakstanyer/tankshootout" target="_blank" style="text-decoration: underline; padding: 2px"> Tank Shootout</a> game. This worked well initially, 
+    but as you progress to later rounds of the game and more enemies are on screen and the area gets expanded, it became ineffective having every enemy trying to pathfind and it affected the game's performance.
+    So in the end I have used a NavMesh for simple movement of the enemies, and then I implemented state machines to give the enemies complex behaviour. I found that this solution was less intensive on my system.
+</p>
+
+<h2>Enemy Spawning</h2>
 
 <Carousel Style="margin-top: 70px">
     <CarouselItem Active="true">

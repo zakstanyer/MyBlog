@@ -26,7 +26,7 @@ This project is an example of a controller-based API created to interact with my
 
 	public async Task FetchData()
 	{
-		game = await httpClient.GetFromJsonAsync<Game>("https://localhost:7029/api/games/1");
+		game = await httpClient.GetFromJsonAsync<Game>("https://localhost:5000/api/games/1");
 	}
 
 

@@ -6,17 +6,18 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddBlazorBootstrap();
+//AddCors fixes the CORS error I was getting when trying to connect to the API.
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", policy =>
                           {
-                              policy.WithOrigins("https://localhost:7237/RESTAPI", "https://zakstanyer.com")
+                              policy.WithOrigins("https://localhost:7237", "https://zakstanyer.com")
                                                   .AllowAnyHeader()
                                                   .AllowAnyMethod()
-                                                  .AllowCredentials()
-                                                  .AllowAnyOrigin();
+                                                  .AllowCredentials();
                           });
 });
 
 
 await builder.Build().RunAsync();
+

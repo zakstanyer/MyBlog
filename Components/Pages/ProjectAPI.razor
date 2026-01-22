@@ -1,20 +1,28 @@
 ﻿@page "/RESTAPI"
 
 <PageTitle>REST API</PageTitle>
-
+<h1>REST API</h1>
 <p>This project is an example of a controller-based API created to interact with my SQL Server database.</p>
 
-<p></p><img src="/Screenshot_7.png" class="centreimage" />
+<p></p>
+<img src="/DefaultConnection.png" class="centreimage" />
+
+<p>This shows my API establishing a connection to my SQL Server database, using the default connection string defined in appsettings.json.</p>
+<br />
+
+
+<p></p><img src="/POST request.png" class="centreimage" />
 
 <p>This is the .http file which is used to send requests to the database to retrieve and modify data. As you can see,
     I have made a request to GET all games in the database and the entries have been displayed on the right.
 </p>
 
-<p></p>
-<img src="/APIConnectToDB.png" class="centreimage" />
 
-<p>This shows my API establishing a connection to my SQL Server database, using the default connection string defined in appsettings.json.</p>
-<br />
+<p></p>
+<img src="/NewDbEntry.png" class="centreimage" />
+
+<p>This is the database in SQL Server Management Studio. You can see that the API is working as intended and the new entry has been added to the database.</p>
+
 <style>
 
     p {
@@ -22,7 +30,7 @@
     }
 
     img {
-        width: 70%;
+        width: 80%;
         height: auto;
     }
 

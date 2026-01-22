@@ -1,7 +1,7 @@
 ﻿@page "/ProjectMyWebsite"
 <PageTitle>My Website</PageTitle>
 
-<h3>My Games Database</h3>
+<h1>My Games Database</h1>
 <br>
 I work on this website for fun and it has been a great opportunity to increase my confidence with HTML and ASP.NET.
 <p>On the frontend I have a list of entries which can be sorted, edited and deleted by the user. The user can also create new entries using a form.
@@ -65,13 +65,13 @@ I work on this website for fun and it has been a great opportunity to increase m
 </div>
 
 <div class="row">
-        <img src="/scorevalidation.png" alt="HTML" style="width:60%"  class="centreimage">
-        <figcaption>Here's an example of data validation being used. I have restricted the score field to an integer between 0 and 10.'
+        <img src="/ErrorValidationForm.png" alt="HTML" style="width:60%"  class="centreimage">
+        <figcaption>Here's an example of data validation being used. I have restricted the score field to an integer between 0 and 10.
         </figcaption>
 </div>
 
 <div class="row">
-    <img src="/datavalidationcode.png" alt="HTML" style="width:60%" class="centreimage">
+    <img src="/ErrorValidationCode.png" alt="HTML" style="width:60%" class="centreimage">
     <figcaption>
         This is my code which validates user input when creating or editing game entries.
     </figcaption>
@@ -81,13 +81,21 @@ I work on this website for fun and it has been a great opportunity to increase m
     <CarouselItem Active="true">
         <div class="row">
             <img src="/formsearch.png" alt="HTML" style="width:60%" class="centreimage">
-            <figcaption>An example of the search bar used to find entries. (1/2)</figcaption>
+            <figcaption>An example of the search bar used to find entries. (1/3)</figcaption>
         </div>
     </CarouselItem>
     <CarouselItem>
         <div class="row">
             <img src="/formsearch2.png" alt="HTML" style="width:60%" class="centreimage">
-            <figcaption>The search bar matches results even if the full title is not entered. (2/2)</figcaption>
+            <figcaption>The search bar matches results even if the full title is not entered. (2/3)</figcaption>
+        </div>
+    </CarouselItem>
+    <CarouselItem Active="true">
+        <div class="row">
+            <img src="/SearchBarCode.png" alt="HTML" style="width:90%" class="centreimage">
+            <figcaption>Here's the code for the search bar. At the top I bind the user's search to the titleFilter variable. 
+                In the code at the bottom I sort the games to show titles which include what the user has searched. 
+                This means the user doesn't need to remember the whole title for a match to be made.' (3/3)</figcaption>
         </div>
     </CarouselItem>
 </Carousel>
